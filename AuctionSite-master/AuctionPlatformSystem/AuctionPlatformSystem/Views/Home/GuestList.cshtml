@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Guests";
+}
+<h2>@ViewBag.Title</h2>
+<form class="form-horizontal">
+    <fieldset>
+        <legend>Guest Profiles</legend>
+        <div class="form-group">
+            <label class="col-lg-2 control-label" for="search">Search</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="search" type="text" placeholder="Search Guests">
+            </div>
+        </div>
+        <div>
+            <h4>Guest 1 <a href="guestlist.com">View/Edit</a> </h4>
+            <h4>Guest 2 <a href="guestlist.com">View/Edit</a> </h4>
+            <h4>Guest 3 <a href="guestlist.com">View/Edit</a> </h4>
+            <h4>Guest 4 <a href="guestlist.com">View/Edit</a> </h4>
+            <h4>Guest 5 <a href="guestlist.com">View/Edit</a> </h4>
+        </div>
+    </fieldset>
+</form>
+
+
+
+
+
+
+
+
+
+        @*@model IEnumerable<AuctionPlatformSystem.Models.Bidder>
+
+            @{
+                ViewBag.Title = "GuestList";
+            }
+
+            <h2>GuestList</h2>
+
+            <p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.firstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.lastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.comments)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.status)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.tableNumber)
+                    </th>
+                    <th></th>
+                </tr>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.firstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.lastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.comments)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tableNumber)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+
+            </table>*@
